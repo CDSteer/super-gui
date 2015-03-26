@@ -9,6 +9,11 @@
       <script src="js/thing.js"></script>
       <script src="js/mobile-angular-ui.min.js"></script>
       <script src="js/mobile-angular-ui.gestures.min.js"></script>
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
+      <link href="css/roboto.min.css" rel="stylesheet">
+      <link href="css/material.min.css" rel="stylesheet">
+      <link href="css/ripples.min.css" rel="stylesheet">
       <style id='example-css'>
 .viewport {
   height: 100%;
@@ -75,9 +80,37 @@ app.directive('dragMe', ['$drag', function($drag){
         <div class='viewport'>
           <div class='drag-area'>
             <div drag-me class='drag-me'>
-              <i class='fa fa-arrows'></i>
+              <div class="card">
+
+                  <div class="card-height-indicator"></div>
+
+                  <div class="card-content">
+                      <div class="card-body">
+                          <p>Test</p>
+                      </div>
+
+                  <!--
+                      <footer class="card-footer">
+                          <button class="btn btn-flat">EXPAND</button>
+
+                      </footer>-->
+
+                  </div>
             </div>
           </div>
         </div>
+        <!-- Your site ends -->
+
+        <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script src="js/ripples.min.js"></script>
+        <script src="js/material.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // This command is used to initialize some elements and make them work properly
+                $.material.init();
+            });
+        </script>
     </body>
 </html>
