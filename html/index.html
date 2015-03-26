@@ -63,8 +63,8 @@
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. :P</p>
                 
             </div>
-			<div class="panel-footer"><p><a class="btn btn-info" href="#" role="button">&laquo; NOT INTERESTED</a></p>
-			<p><a class="btn btn-info" href="#" role="button">INTERESTED &raquo;</a></p></div>
+				<div class="panel-footer"><p><a class="btn btn-info btn-material-red btn-not" href="#" role="button">&laquo; NOT INTERESTED</a></p>
+			</div>
           </div>
         </div>
 
@@ -102,6 +102,15 @@
       $(document).ready(function() {
           $.material.init();
       });
+	  
+	  $('.panel-body').click(function(e){
+		alert($(e.target).text());
+		});
+		
+	$('.btn-not').click(function(e){
+	$(e.target).remove();
+	 //$( "div" ).remove(".panel-default " + button.target);
+		}); 
     </script>
   </body>
 </html>
